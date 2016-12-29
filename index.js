@@ -12,48 +12,6 @@ module.exports = {
     issuesUrl: 'https://github.com/popcorn-official/popcorn-desktop/issues',
     sourceUrl: 'https://github.com/popcorn-official/popcorn-desktop/',
     commitUrl: 'https://github.com/popcorn-official/popcorn-desktop/commit',
-     providers: {
-         movie: {
-             order: 1,
-             name: 'Movies',
-             uri: ['MovieApi?'
-                   +'&apiURL='
-                     + 'https://movies-v2.api-fetch.website/,'
-                     + 'cloudflare+https://movies-v2.api-fetch.website,'
-//                     + 'cloudflare+http://xor.image.yt'
-                  ]
-         },
-         tvshow: {
-             order: 2,
-             name: 'Series',
-             uri: ['TVApi?'
-                   +'&apiURL='
-                     + 'https://tv-v2.api-fetch.website/,'
-                     + 'cloudflare+https://tv-v2.api-fetch.website,'
-//                     + 'http://tv.ytspt.re/'
-                  ]
-         },
-       anime: {
-             order: 3,
-             name: 'Anime',
-             uri: ['AnimeApi?'
-                   +'&apiURL='
-                     + 'https://anime.api-fetch.website/,'
-                     + 'cloudflare+https://anime.api-fetch.website,'
-//                     + 'http://tv.ytspt.re/'
-                  ]
-         },
-         indie: {
-             order: 4,
-             name: 'Indie',
-             uri: ['vodo']
-         },
-
-         subtitle: 'OpenSubtitles',
-         metadata: 'Trakttv',
-         tvst: 'TVShowTime',
-         torrentCache: 'TorrentCache'         
-     },
     updateEndpoint: {
         url: 'https://popcorntime.sh/',
         index: 0,
@@ -73,6 +31,48 @@ module.exports = {
         'GOm3OxA3zKXG4cjy6TyEKajYlT45Q+tgt1L1HuGAJjWFRSA0PP9ctC6nH+2N3HmW\n' +
         'RTcms0CPio56gg==\n' +
         '-----END PUBLIC KEY-----\n',
+    tabs: {
+        movie: {
+            order: 1,
+            name: 'Movies',
+            providers: ['MovieApi?&apiURL=https://movies-v2.api-fetch.website/,cloudflare+https://movies-v2.api-fetch.website/&lang=en&quality=720p']
+        },
+        tvshow: {
+            order: 2,
+            name: 'Series',
+            providers: ['TVApi?&apiURL=https://tv-v2.api-fetch.website/,cloudflare+https://tv-v2.api-fetch.website/']
+        },
+        anime: {
+            order: 3,
+            name: 'Anime',
+            providers: ['AnimeApi?&apiURL=https://anime.api-fetch.website/,cloudflare+https://anime.api-fetch.website/']
+        },
+        indie: {
+            order: 4,
+            name: 'Indie',
+            providers: ['vodo']
+        }
+    },
+    opensubtitles: {
+        useragent: 'Popcorn Time NodeJS'
+    },
+    trakttv: {
+        client_id: '647c69e4ed1ad13393bf6edd9d8f9fb6fe9faf405b44320a6b71ab960b4540a2',
+        client_secret: 'f55b0a53c63af683588b47f6de94226b7572a6f83f40bd44c58a7c83fe1f2cb1'
+    },
+    tvshowtime: {
+        client_id: 'iM2Vxlwr93imH7nwrTEZ',
+        client_secret: 'ghmK6ueMJjQLHBwsaao1tw3HUF7JVp_GQTwDwhCn'
+    },
+    fanart: {
+        api_key: '8104b601679c3ec23e7d3e4d93ddb46f'
+    },
+    tvdb: {
+        api_key: '9845B685B799009C'
+    },
+    tmdb: {
+        api_key: '1a83b1ecd56e3ac0e509b553b68c77a9'
+    },
     httpApiUsername: 'popcorn',
     httpApiPassword: 'popcorn',
     activateVpn: false
